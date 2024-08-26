@@ -8,12 +8,7 @@ export class SearchResultsPage {
   }
 
   async clickOnFirstResult() {
-    await this.page
-      .locator(
-        "#root-app > div > div.ui-search-main.ui-search-main--only-products.ui-search-main--with-topkeywords > section > ol > li:nth-child(1)"
-      )
-      .locator("> div > div")
-      .click();
+    await this.page.locator(".poly-card.poly-card--list").first().click();
   }
 
   async addItemToCart() {
